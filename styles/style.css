@@ -18,8 +18,6 @@ header {
     padding: 15px 20px;
     align-items: center;
     top: 0;
-    position: fixed;
-    width: 100%;
 }
 
 .logo {
@@ -32,8 +30,6 @@ header {
     width: auto;
     display: block;
 }
-
-
 
 nav ul {
     list-style: none;
@@ -54,7 +50,6 @@ nav ul li a {
     margin-right: 15px;
 }
 
-
 nav ul li a:hover{
     background-color: #ff7b00;
     color: rgb(255, 255, 255);
@@ -62,17 +57,17 @@ nav ul li a:hover{
     font-size: 1rem;
 }
 
-.order-btn {
+.navbtn {
     background: yellow;
     color: black;
     padding: 5px 10px;
-    border-radius: 5px 10px;
+    border-radius: 5px;
 }
 
 /* Main Section */
 .main {
     background-color:  #ff7b00;
-    background-image: linear-gradient(90deg,#ff7b00,#ff0800ea);
+    background-image: linear-gradient(135deg,#ff7b00,#ff0800ea);
     height: 600px;
     display: flex;
     flex-direction: column;
@@ -97,17 +92,13 @@ nav ul li a:hover{
 
 .btn {
     background: #000000;
-    background-image: linear-gradient(90deg,black,rgb(46, 46, 46),black);
+    background-image: linear-gradient(45deg,black,rgb(46, 46, 46),black);
     color: white;
     padding: 10px 20px;
     font-size: 18px;
     text-decoration: none;
     border-radius: 5px;
 }
-
-/* order section */
-
-
 
 /* Footer */
 footer {
@@ -189,4 +180,19 @@ footer {
     position: absolute;
     top: -5px;
     right: -10px;
+}
+
+
+@media (max-width:768px) {
+    .order-btn{
+        display: none;
+    }
+    .main h1{
+        font-size: 35px;
+    }
+    .footer-container{
+        padding: 0 30px;
+        display: flex;
+        flex-direction: column;
+    }
 }

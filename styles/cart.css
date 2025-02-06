@@ -1,32 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    font-family: 'Open Sans';
+}
+
 .cart-container {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
-    max-width: 900px;
-    margin: 100px auto;
+    width: 900px;
+    height: 500px;
+    margin: 10px auto;
     padding: 20px;
     background: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 10px rgba(235, 128, 6, 0.1);
     border-radius: 10px;
 }
 
-.user-details, .cart-items {
+.user-details,
+.cart-items {
     width: 45%;
     padding: 20px;
 }
 
 .cart-items {
-    border-left: 2px solid #ccc;
-}
-
-.cart-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #0018a0b4;
+    ;
 }
 
 .cart-item button {
-    background: red;
+    background: rgb(0, 74, 172);
     color: white;
     border: none;
     padding: 5px 10px;
@@ -34,11 +37,85 @@
 }
 
 .btn {
-    background: green;
+    background: rgb(0, 66, 128);
     color: white;
+    margin: 10px;
     padding: 10px;
-    width: 100%;
     border: none;
+    width: 100px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+#paybtn {
+    display: none;
+}
+
+#checkout-form {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-family: 'Open Sans';
+}
+
+#checkout-form input {
+    padding: 10px;
+    width: 80%;
+    margin: 8px 0;
+    font-family: 'Open Sans';
+    border-radius: 5px;
+    border: 1px solid rgba(0, 24, 160, 0.705);
+    outline: olivedrab;
+}
+
+#checkout-form textarea {
+    padding: 10px;
+    margin: 10px 0;
+    /* width: 85%;
+    height: 100px; */
+    font-family: 'Open Sans';
+    border: 1px solid rgba(0, 24, 160, 0.705);
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .cart-container {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .user-details,
+    .cart-items {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .cart-items {
+        width: 300px;
+        border-left: none;
+        margin-top: 10px;
+    }
+
+    .cart-list {
+        text-align: left;
+    }
+
+    #checkout-form input,
+    #checkout-form textarea {
+        width: 80%;
+    }
+
+    .btn {
+        display: none;
+    }
+
+    #paybtn{
+        display: block;
+    }
+    .footer-container{
+        display: none;
+    }
 }

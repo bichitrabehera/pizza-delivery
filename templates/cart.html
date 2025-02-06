@@ -29,34 +29,90 @@
             </ul>
         </nav>
     </header>
-    
+
 
     <div class="cart-container">
-        <div class="user-details">
-            <h2>Enter Your Details</h2>
-            <form id="checkout-form">
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" required>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" required>
-
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" required>
-
-                <label for="address">Delivery Address:</label>
-                <textarea id="address" required></textarea>
-
-                <button type="submit" class="btn">Pay Now</button>
-            </form>
-        </div>
-    
         <div class="cart-items">
             <h2>Your Cart</h2>
             <div id="cart-list"></div>
             <p id="total-price"></p>
+            <button type="submit" class="btn">Pay Now</button>
+
         </div>
+        <div class="user-details">
+            <h2>Enter Your Details</h2>
+            <form id="checkout-form">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required placeholder="Enter your name">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required placeholder="Enter your e-mail">
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" required placeholder="Phone Number">
+
+                <label for="address">Delivery Address:</label>
+                <textarea id="address" required placeholder="Enter your address" rows="5" cols="20"></textarea>
+
+                <button type="submit" class="btn" id="paybtn">Pay Now</button>
+
+            </form>
+        </div>
+
+        
     </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press & Media</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Customer Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Track Your Order</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Policies</h4>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Refund & Cancellation</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Order & Delivery</h4>
+                <ul>
+                    <li><a href="#">How It Works</a></li>
+                    <li><a href="#">Delivery Areas</a></li>
+                    <li><a href="#">Pricing & Offers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social-media">
+                <h4>Follow Us</h4>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-section copyright" >
+                <p>&copy; 2025 PizzaExpress. All Rights Reserved.</p>
+            </div>
+
+        </div>
+
+    </footer>
+
 
     <script src="../js/script.js"></script>
 

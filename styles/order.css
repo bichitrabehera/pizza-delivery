@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+
+
 .order-section {
     text-align: center;
     padding: 30px;
@@ -17,7 +19,7 @@
     color: #ff4500;
     margin-bottom: 20px;
 }
-
+ 
 .logo img {
     height: 50px;
     width: auto;
@@ -62,13 +64,13 @@ textarea {
 }
 
 .choose-pizza {
-    margin-top: 100px;
     height: auto;
     display: flex;
     flex-direction: column;
 }
 
 .pizza-section {
+    margin: 10px auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;

@@ -11,7 +11,7 @@ function addToCart(button) {
     let price = parseFloat(card.dataset.price);
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    
+
     // Check if item already exists
     let itemIndex = cart.findIndex(item => item.name === name);
     if (itemIndex !== -1) {
@@ -29,11 +29,13 @@ function addToCart(button) {
 function loadCart() {
     let cartList = document.getElementById("cart-list");
     let totalPriceElement = document.getElementById("total-price");
-
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     cartList.innerHTML = "";
 
     let total = 0;
+    if (cartList == null) {
+        totalPriceElement.innerHTML = "Cart Is empty"
+    }
     cart.forEach((item, index) => {
         let itemElement = document.createElement("div");
         itemElement.classList.add("cart-item");
