@@ -53,13 +53,13 @@ function loadCart() {
     totalPriceElement.innerText = "Total: $" + total.toFixed(2);
     updateCartCount();
 }
-
 // Function to increase quantity
 function increaseQuantity(index) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     cart[index].quantity += 1;
     localStorage.setItem("cart", JSON.stringify(cart));
     loadCart();
+    updateCartCount(); // Update cart count after change
 }
 
 // Function to decrease quantity
@@ -72,6 +72,7 @@ function decreaseQuantity(index) {
     }
     localStorage.setItem("cart", JSON.stringify(cart));
     loadCart();
+    updateCartCount(); // Update cart count after change
 }
 
 // Function to remove item from cart
@@ -80,7 +81,9 @@ function removeFromCart(index) {
     cart.splice(index, 1);
     localStorage.setItem("cart", JSON.stringify(cart));
     loadCart();
+    updateCartCount(); // Update cart count after change
 }
+
 
 // Ensure cart count is updated on all pages
 document.addEventListener("DOMContentLoaded", updateCartCount);
