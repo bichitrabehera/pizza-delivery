@@ -14,7 +14,7 @@
     <!-- Header -->
     <header>
         <div class="logo">
-            <a href="../front.html">
+            <a href="../index.html">
                 <img src="../images/logo.png" alt="Pizza Express Logo">
             </a>
         </div>
@@ -22,7 +22,7 @@
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="cart.html">Cart</a></li>
-                <li><a href="cart.html" class="order-btn">Order Now</a></li>
+                <li><a href="order.html" class="order-btn">Order Now</a></li>
             </ul>
         </nav>
     </header>
@@ -32,117 +32,33 @@
             <h1>Choose A Pizza</h1>
         </div>
         <div class="pizza-section">
-            <div class="pizza-card">
+            <div class="pizza-card" data-name="Pepperoni Pizza" data-price="12.99">
                 <img src="https://source.unsplash.com/280x180/?pizza" alt="Pizza">
                 <h3>Pepperoni Pizza</h3>
                 <p>Size: Large</p>
                 <p class="price">$12.99</p>
-                <button>Add to Cart</button>
+                <button onclick="addToCart(this)">Add to Cart</button>
             </div>
 
-            <div class="pizza-card">
-                <img src="https://source.unsplash.com/280x180/?pizza" alt="Pizza">
-                <h3>Pepperoni Pizza</h3>
+            <div class="pizza-card" data-name="Veggie Pizza" data-price="10.99">
+                <img src="https://source.unsplash.com/280x180/?veggie-pizza" alt="Pizza">
+                <h3>Veggie Pizza</h3>
+                <p>Size: Medium</p>
+                <p class="price">$10.99</p>
+                <button onclick="addToCart(this)">Add to Cart</button>
+            </div>
+
+            <div class="pizza-card" data-name="BBQ Chicken Pizza" data-price="14.99">
+                <img src="https://source.unsplash.com/280x180/?bbq-pizza" alt="Pizza">
+                <h3>BBQ Chicken Pizza</h3>
                 <p>Size: Large</p>
-                <p class="price">$12.99</p>
-                <button>Add to Cart</button>
+                <p class="price">$14.99</p>
+                <button onclick="addToCart(this)">Add to Cart</button>
             </div>
-
-
-            <div class="pizza-card">
-                <img src="https://source.unsplash.com/280x180/?pizza" alt="Pizza">
-                <h3>Pepperoni Pizza</h3>
-                <p>Size: Large</p>
-                <p class="price">$12.99</p>
-                <button>Add to Cart</button>
-            </div>
-
-            <div class="pizza-card">
-
-                <img src="https://source.unsplash.com/280x180/?pizza" alt="Pizza">
-                <h3>Pepperoni Pizza</h3>
-                <p>Size: Large</p>
-                <p class="price">$12.99</p>
-                <button>Add to Cart</button>
-
-            </div>
-
-            <div class="pizza-card">
-
-                <img src="https://source.unsplash.com/280x180/?pizza" alt="Pizza">
-                <h3>Pepperoni Pizza</h3>
-                <p>Size: Large</p>
-                <p class="price">$12.99</p>
-                <button>Add to Cart</button>
-
-            </div>
-
-            <div class="pizza-card">
-
-                <img src="https://source.unsplash.com/280x180/?pizza" alt="Pizza">
-                <h3>Pepperoni Pizza</h3>
-                <p>Size: Large</p>
-                <p class="price">$12.99</p>
-                <button>Add to Cart</button>
-
-            </div>
-
         </div>
     </section>
 
-    <div class="checkout">
-        <button><a href="cart.html">Proceed To Payment</a></button>
-    </div>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h4>About Us</h4>
-                <ul>
-                    <li><a href="#">Our Story</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Press & Media</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Customer Support</h4>
-                <ul>
-                    <li><a href="#">Help Center</a></li>
-                    <li><a href="#">Track Your Order</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Policies</h4>
-                <ul>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Refund & Cancellation</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Order & Delivery</h4>
-                <ul>
-                    <li><a href="#">How It Works</a></li>
-                    <li><a href="#">Delivery Areas</a></li>
-                    <li><a href="#">Pricing & Offers</a></li>
-                </ul>
-            </div>
-            <div class="footer-section social-media">
-                <h4>Follow Us</h4>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="footer-section copyright">
-                <p>&copy; 2025 PizzaExpress. All Rights Reserved.</p>
-            </div>
-
-        </div>
-
-    </footer>
+    <script src="../js/script.js"></script>
 
 </body>
 
