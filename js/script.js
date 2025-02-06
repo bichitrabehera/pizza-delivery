@@ -1,3 +1,9 @@
+// Function to update the cart count in the header
+function updateCartCount() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    document.getElementById("cart-count").innerText = cart.length;
+}
+
 // Function to add items to cart
 function addToCart(button) {
     let card = button.closest(".pizza-card");
@@ -8,6 +14,7 @@ function addToCart(button) {
     cart.push({ name, price });
     localStorage.setItem("cart", JSON.stringify(cart));
 
+    updateCartCount(); // Update the cart count after adding an item
     alert(name + " added to cart!");
 }
 
@@ -32,6 +39,7 @@ function loadCart() {
     });
 
     totalPriceElement.innerText = "Total: $" + total.toFixed(2);
+    updateCartCount(); // Update cart count when loading cart
 }
 
 // Function to remove item from cart
@@ -42,7 +50,8 @@ function removeFromCart(index) {
     loadCart();
 }
 
-// Ensure cart is loaded when visiting the cart page
+// Ensure cart count is updated on all pages
+document.addEventListener("DOMContentLoaded", updateCartCount);
 if (window.location.pathname.includes("cart.html")) {
     document.addEventListener("DOMContentLoaded", loadCart);
 }

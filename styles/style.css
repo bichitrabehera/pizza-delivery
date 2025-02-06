@@ -179,3 +179,14 @@ footer {
 .footer-bottom :hover {
     opacity: 1;
 }
+#cart-count {
+    background: red;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 3px 7px;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+}
