@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Pizza - Pizza Express</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="front.html">
+                <img src="./logo.jpg" alt="Pizza Express Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="order.html" class="order-btn">Order Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Order Form Section -->
+    <section class="order-section">
+        <h1>Order Your Pizza</h1>
+        <form action="submit_order.php" method="POST">
+            <label for="pizza">Choose Your Pizza:</label>
+            <select id="pizza" name="pizza" required>
+                <option value="margherita">Margherita</option>
+                <option value="pepperoni">Pepperoni</option>
+                <option value="bbq">BBQ Chicken</option>
+                <option value="veggie">Veggie Delight</option>
+            </select>
+
+            <label for="size">Select Size:</label>
+            <select id="size" name="size" required>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+
+            <label for="toppings">Extra Toppings:</label>
+            <input type="checkbox" name="toppings[]" value="cheese"> Extra Cheese
+            <input type="checkbox" name="toppings[]" value="olives"> Olives
+            <input type="checkbox" name="toppings[]" value="mushrooms"> Mushrooms
+            <input type="checkbox" name="toppings[]" value="jalapenos"> Jalapenos
+
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="address">Delivery Address:</label>
+            <textarea id="address" name="address" required></textarea>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="payment">Payment Method:</label>
+            <select id="payment" name="payment" required>
+                <option value="cash">Cash on Delivery</option>
+                <option value="card">Credit/Debit Card</option>
+            </select>
+
+            <button type="submit" class="btn">Place Order</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Pizza Express. All rights reserved.</p>
+        <p>Contact: <a href="mailto:support@pizzaexpress.com">support@pizzaexpress.com</a></p>
+        <p>Follow us on 
+            <a href="#">Facebook</a> | 
+            <a href="#">Instagram</a> | 
+            <a href="#">Twitter</a>
+        </p>
+    </footer>
+
+</body>
+</html>
