@@ -64,7 +64,7 @@ textarea {
 }
 
 .choose-pizza {
-    height: auto;
+    margin: 100px auto;
     display: flex;
     flex-direction: column;
 }
